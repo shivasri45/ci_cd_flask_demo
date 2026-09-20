@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - echo "Install phase started"
+      - python --version
+      - pip install -r requirements.txt
+
+  pre_build:
+    commands:
+      - echo "Running tests"
+      - pytest
+
+  build:
+    commands:
+      - echo "Build phase started"
+      - echo "Building Flask application"
+
+  post_build:
+    commands:
+      - echo "Build completed successfully"
+
+artifacts:
+  files:
+    - '**/*'
