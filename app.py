@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return """
     <h1>Hello from KIET Flask CI/CD</h1>
-    <h2>Version 1</h2>
+    <h2>Version 2</h2>
     <p>Deployed using AWS CodePipeline</p>
     """
 
